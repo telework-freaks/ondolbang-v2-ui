@@ -8,7 +8,7 @@ type NavBarProps = {};
 export const NavBar: React.FC<NavBarProps> = (props: NavBarProps) => {
 	return (
 		<nav className={$.container}>
-			<span className={$.logo}>Ondolbang</span>
+			<a href="/"><span className={$.logo}>Ondolbang</span></a>
 			<SearchBar></SearchBar>
 		</nav>
 	);
