@@ -1,14 +1,16 @@
 $width: 30vw;
+$min-width: 350px;
 $z-index: 9;
 $triangle-size: 8px;
+$toggler-left: max(#{$width}, #{$min-width});
 
 .toggler_container {
 	width: 24px;
 	height: 80px;
 	background-color: #fff;
-	position: fixed;
+	position: absolute;
 	top: 50%;
-	left: $width;
+	left: $toggler-left;
 	z-index: $z-index;
 	border-radius: 0px 8px 8px 0px;
 	cursor: pointer;
@@ -27,7 +29,7 @@ $triangle-size: 8px;
 	}
 
 	&.toggler_hidden {
-		transform: translateX(calc(#{$width} * -1 * 0.99));
+		transform: translateX(calc(#{$toggler-left} * -1 * 0.99));
 
 		.triangle {
 			transform: scaleX(-1);
@@ -37,6 +39,7 @@ $triangle-size: 8px;
 
 .container {
 	width: $width;
+	min-width: $min-width;
 	max-width: 500px;
 	background-color: #fff;
 	position: absolute;
