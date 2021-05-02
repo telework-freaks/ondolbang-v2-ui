@@ -4,11 +4,7 @@ import dynamic from "next/dynamic";
 
 import { NavBar } from "@components/NavBar/NavBar";
 import MapInitializer from "@components/MapInitializer/MapInitializer";
-
-// const MapInitializer = dynamic(
-// 	() => import("@components/MapInitializer/MapInitializer"),
-// 	{ loading: () => <div>loading maps...</div>, ssr: false }
-// );
+import { SideBar } from "@components/SideBar/SideBar";
 
 export default function Search() {
 	return (
@@ -19,8 +15,17 @@ export default function Search() {
 					src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_APIKEY}&libraries=services,clusterer,drawing`}
 				></script>
 			</Head>
-			<NavBar></NavBar>
-			<MapInitializer></MapInitializer>
+			<header>
+				<NavBar></NavBar>
+			</header>
+
+			<main>
+				<MapInitializer></MapInitializer>
+			</main>
+
+			<aside>
+				<SideBar sidebar="shown" navHeight="75px"></SideBar>
+			</aside>
 		</>
 	);
 }
