@@ -9,7 +9,7 @@ declare global {
 
 const MapInitializer: React.FC<{}> = (props: {}) => {
 	React.useEffect(() => {
-		const container = document.getElementById("map");
+		const container = document.getElementById($.map);
 		const options = {
 			center: new window.kakao.maps.LatLng(33.450701, 126.570667),
 			level: 3,
@@ -21,7 +21,7 @@ const MapInitializer: React.FC<{}> = (props: {}) => {
 	return (
 		<div className={$.container}>
 			<div
-				id="map"
+				id={$.map}
 				style={{ width: "100vw", height: "calc(100vh - 75px)" }}
 			></div>
 		</div>
