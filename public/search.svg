@@ -1,0 +1,30 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 500 500"
+	version="1.1"
+	id="SVGRoot"
+>
+  <g>
+    <g
+			transform="matrix(1.0565857,-1.0565857,1.0565857,1.0565857,-261.81588,261.62925)"
+		>
+      <ellipse
+				style="fill:none;stroke:#000000;stroke-width:19.0674;stroke-linecap:square"
+				id="path1407"
+				cx="250"
+				cy="200"
+				rx="115.46629"
+				ry="115.4663"
+			/>
+      <rect
+				style="fill:none;stroke:#000000;stroke-width:18.0656;stroke-linecap:square"
+				id="rect1409"
+				width="11.93442"
+				height="102.4373"
+				x="244.03281"
+				y="-421.47009"
+				transform="scale(1,-1)"
+			/>
+    </g>
+  </g>
+</svg>

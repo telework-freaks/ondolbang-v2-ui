@@ -1,0 +1,41 @@
+@use "@styles/mixins.scss" as *;
+
+.container {
+	width: 100%;
+	height: 100%;
+	color: #e5e5e5;
+	font-size: 1.25rem;
+	@include flex_center_vertical;
+
+	.resolver_container {
+		display: flex;
+		font-size: 1rem;
+		margin-bottom: 10px;
+
+		.resolver_wrapper {
+			overflow: hidden;
+			display: inline-block;
+			height: 1rem;
+			margin-right: 8px;
+
+			scroll-snap-type: y mandatory;
+			scroll-behavior: smooth;
+
+			& > div {
+				color: #f88;
+				scroll-snap-align: center;
+				@include flex_center;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	.result_num_container {
+		font-size: 1.725rem;
+
+		.number {
+			color: #f8f8f8;
+			text-decoration: underline;
+		}
+	}
+}
